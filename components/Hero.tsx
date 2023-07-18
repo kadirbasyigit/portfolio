@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import developerImg from '../public/developer.png';
+import developerImg from '../public/developer.webp';
 
 const Hero = () => {
   return (
