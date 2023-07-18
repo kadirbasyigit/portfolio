@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import myLogo from '../public/myLogo.svg';
 import { Button } from './ui/button';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { RiMenu5Fill, RiCloseFill } from 'react-icons/ri';
 import { AnimatePresence, motion } from 'framer-motion';
+import { animateScroll as scroll, scroller, Events } from 'react-scroll';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,6 +30,13 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    scroller.scrollTo(sectionId, {
+      smooth: true,
+      offset: -89,
+    });
+  };
 
   return (
     <nav
@@ -54,7 +62,9 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <a href="#about">About me</a>
+          <a href="#about" onClick={() => scrollToSection('about')}>
+            About me
+          </a>
         </Button>
 
         <Button
@@ -66,7 +76,9 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <a href="#projects">Projects</a>
+          <a href="#projects" onClick={() => scrollToSection('projects')}>
+            Projects
+          </a>
         </Button>
         <Button
           asChild
@@ -77,7 +89,9 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <a href="#stats">Stats</a>
+          <a href="#stats" onClick={() => scrollToSection('stats')}>
+            Stats
+          </a>
         </Button>
       </div>
 
@@ -115,6 +129,7 @@ const Navbar = () => {
                 variant="link"
               >
                 <motion.a
+                  onClick={() => scrollToSection('about')}
                   initial={{
                     opacity: 0,
                     scale: 0.3,
@@ -124,8 +139,8 @@ const Navbar = () => {
                     scale: 1,
                   }}
                   exit={{ opacity: 0, scale: 0.3 }}
-                  href="#about"
                   transition={{ delay: 0.2 }}
+                  href="#about"
                 >
                   About me
                 </motion.a>
@@ -138,6 +153,7 @@ const Navbar = () => {
                 variant="link"
               >
                 <motion.a
+                  onClick={() => scrollToSection('projects')}
                   initial={{
                     opacity: 0,
                     scale: 0.3,
@@ -147,8 +163,8 @@ const Navbar = () => {
                     scale: 1,
                   }}
                   exit={{ opacity: 0, scale: 0.3 }}
-                  href="#projects"
                   transition={{ delay: 0.2 }}
+                  href="#projects"
                 >
                   Projects
                 </motion.a>
@@ -160,6 +176,7 @@ const Navbar = () => {
                 variant="link"
               >
                 <motion.a
+                  onClick={() => scrollToSection('stats')}
                   initial={{
                     opacity: 0,
                     scale: 0.3,
@@ -169,8 +186,8 @@ const Navbar = () => {
                     scale: 1,
                   }}
                   exit={{ opacity: 0, scale: 0.3 }}
-                  href="#stats"
                   transition={{ delay: 0.2 }}
+                  href="#stats"
                 >
                   Stats
                 </motion.a>
