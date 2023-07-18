@@ -7,7 +7,6 @@ export default function Home() {
       <div className="w-11/12 lg:max-w-[1000px] mx-auto">
         <Navbar />
         <Hero />
-        {/* <Opinions/> */}
         {/* Stats */}
         {/* <Projects/> */}
         {/* <Footer/> */}

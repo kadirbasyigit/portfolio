@@ -56,17 +56,7 @@ const Navbar = () => {
         >
           <a href="#about">About me</a>
         </Button>
-        <Button
-          asChild
-          className={` transition duration-200 ease-in-out p-0 ${
-            scrolled
-              ? 'text-black hover:text-[#005DA3] '
-              : 'text-[#D1D1D1] hover:text-white'
-          }`}
-          variant="link"
-        >
-          <a href="#opinions">Opinions</a>
-        </Button>
+
         <Button
           asChild
           className={` transition duration-200 ease-in-out p-0 ${
@@ -140,28 +130,7 @@ const Navbar = () => {
                   About me
                 </motion.a>
               </Button>
-              <Button
-                asChild
-                onClick={() => setIsMenuOpen(prevState => !prevState)}
-                className="p-0 text-[#efe7e7]"
-                variant="link"
-              >
-                <motion.a
-                  initial={{
-                    opacity: 0,
-                    scale: 0.3,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  exit={{ opacity: 0, scale: 0.3 }}
-                  href="#opinions"
-                  transition={{ delay: 0.2 }}
-                >
-                  Opinions
-                </motion.a>
-              </Button>
+
               <Button
                 asChild
                 onClick={() => setIsMenuOpen(prevState => !prevState)}
