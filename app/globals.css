@@ -83,3 +83,10 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+
+.gradient-text {
+  background: linear-gradient(134deg, #3bf686 50.52%, #4ca9ff 89.58%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

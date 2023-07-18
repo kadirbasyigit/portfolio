@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-10 h-[89px] ${
+      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] ${
         scrolled ? 'bg-transparent' : 'bg-[#09090B]'
       } `}
     >
@@ -77,6 +77,17 @@ const Navbar = () => {
           variant="link"
         >
           <a href="#projects">Projects</a>
+        </Button>
+        <Button
+          asChild
+          className={` transition duration-200 ease-in-out p-0 ${
+            scrolled
+              ? 'text-black hover:text-[#005DA3] '
+              : 'text-[#D1D1D1] hover:text-white'
+          }`}
+          variant="link"
+        >
+          <a href="#stats">Stats</a>
         </Button>
       </div>
 
@@ -171,6 +182,28 @@ const Navbar = () => {
                   transition={{ delay: 0.2 }}
                 >
                   Projects
+                </motion.a>
+              </Button>
+              <Button
+                asChild
+                onClick={() => setIsMenuOpen(prevState => !prevState)}
+                className="p-0 text-[#efe7e7]"
+                variant="link"
+              >
+                <motion.a
+                  initial={{
+                    opacity: 0,
+                    scale: 0.3,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  exit={{ opacity: 0, scale: 0.3 }}
+                  href="#stats"
+                  transition={{ delay: 0.2 }}
+                >
+                  Stats
                 </motion.a>
               </Button>
             </motion.div>

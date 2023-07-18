@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sora: 'Sora, sans-serif',
+      },
       colors: {
         green: '#3BF686',
         darkBlue: '#4CA9FF',
