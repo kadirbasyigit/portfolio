@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] ${
+      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] z-50 ${
         scrolled ? 'bg-transparent' : 'bg-[#09090B]'
       } `}
     >

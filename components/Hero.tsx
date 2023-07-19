@@ -19,7 +19,7 @@ const Hero = () => {
             rotateZ: 0,
           }}
           exit={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
-          className="gradient-text | text-3xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
+          className="relative gradient-text | text-3xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
         >
           I&apos;m a front end developer from Turkey
         </motion.h2>
@@ -36,13 +36,17 @@ const Hero = () => {
           >
             Hi, my name is Kadir. I really like to bring good-looking and
             interesting websites and web apps to life. I see myself as someone
-            who is open to improvement, strong in communication and willing to
-            solve problems. I have a very curious nature and this is a strong
-            factor that fuels my enthusiasm for research. I am a person who does
-            not get tired of dealing with the problems I encounter and I never
-            delegate my responsibilities to others. I really like software
-            development. I think I understand the importance of not rushing to
-            write code, maintaining it, being clean and of good quality.
+            who is open to <span className="gradient-text">improvement</span>,
+            strong in <span className="gradient-text">communication</span> and
+            willing to <span className="gradient-text">solve problems</span>. I
+            have a very curious nature and this is a strong factor that fuels my
+            enthusiasm for research. I am a person who does not get tired of
+            dealing with the problems I encounter and I never delegate my
+            responsibilities to others. I really like software development.{' '}
+            <span className="gradient-text">
+              I think I understand the importance of not rushing to write code,{' '}
+              maintaining it, being clean and of good quality.
+            </span>
           </motion.p>
         </AnimatePresence>
       </div>
