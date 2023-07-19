@@ -52,7 +52,7 @@ const Skills = () => {
       </h3>
 
       <div className="grid md:grid-cols-2 gap-x-16" ref={ref}>
-        <div className="space-y-4">
+        <div className="space-y-4 mb-4 md:mb-0">
           <div className="flex items-center space-x-4">
             <RiHtml5Fill className="w-10 h-10 text-red-500" />
             <Progress value={htmlProgress} />
