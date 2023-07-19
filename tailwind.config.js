@@ -20,9 +20,6 @@ module.exports = {
         sora: 'Sora, sans-serif',
       },
       colors: {
-        green: '#3BF686',
-        darkBlue: '#4CA9FF',
-        lightBlue: '#62D9FF',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

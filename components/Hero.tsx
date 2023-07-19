@@ -22,7 +22,7 @@ const Hero = () => {
           exit={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
           className="relative gradient-text | text-3xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
         >
-          I&apos;m a front end developer from Turkey
+          I&apos;m a front end developer from Türkiye
         </motion.h2>
 
         <Highlighter

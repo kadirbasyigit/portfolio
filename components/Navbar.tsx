@@ -34,7 +34,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     scroller.scrollTo(sectionId, {
       smooth: true,
-      offset: -89,
+      offset: -100,
     });
   };
 
@@ -89,8 +89,8 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <a href="#stats" onClick={() => scrollToSection('stats')}>
-            Stats
+          <a href="#skills" onClick={() => scrollToSection('skills')}>
+            Skills
           </a>
         </Button>
       </div>
@@ -176,7 +176,7 @@ const Navbar = () => {
                 variant="link"
               >
                 <motion.a
-                  onClick={() => scrollToSection('stats')}
+                  onClick={() => scrollToSection('skills')}
                   initial={{
                     opacity: 0,
                     scale: 0.3,
@@ -187,9 +187,9 @@ const Navbar = () => {
                   }}
                   exit={{ opacity: 0, scale: 0.3 }}
                   transition={{ delay: 0.2 }}
-                  href="#stats"
+                  href="#skills"
                 >
-                  Stats
+                  Skills
                 </motion.a>
               </Button>
             </motion.div>
