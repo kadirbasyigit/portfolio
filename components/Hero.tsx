@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import developerImg from '../public/developer.webp';
 import { motion, AnimatePresence } from 'framer-motion';
+import Highlighter from 'react-highlight-words';
 
 const Hero = () => {
   return (
@@ -23,32 +24,19 @@ const Hero = () => {
         >
           I&apos;m a front end developer from Turkey
         </motion.h2>
-        <AnimatePresence>
-          <motion.p
-            initial={{ opacity: 0, scale: 0.5, rotateZ: 90 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              rotateZ: 0,
-            }}
-            exit={{ opacity: 0, scale: 0.5, rotateZ: 90 }}
-            className="leading-6 text-sm md:text-base text-black/80"
-          >
-            Hi, my name is Kadir. I really like to bring good-looking and
-            interesting websites and web apps to life. I see myself as someone
-            who is open to <span className="gradient-text">improvement</span>,
-            strong in <span className="gradient-text">communication</span> and
-            willing to <span className="gradient-text">solve problems</span>. I
-            have a very curious nature and this is a strong factor that fuels my
-            enthusiasm for research. I am a person who does not get tired of
-            dealing with the problems I encounter and I never delegate my
-            responsibilities to others. I really like software development.{' '}
-            <span className="gradient-text">
-              I think I understand the importance of not rushing to write code,{' '}
-              maintaining it, being clean and of good quality.
-            </span>
-          </motion.p>
-        </AnimatePresence>
+
+        <Highlighter
+          highlightClassName="animated-gradient-text"
+          className="leading-6 text-sm md:text-base text-black/80"
+          searchWords={[
+            'improvement',
+            'communication ',
+            'solve problems',
+            'I think I understand the importance of not rushing to write code, maintaining it, being clean and of good quality.',
+          ]}
+          autoEscape={true}
+          textToHighlight="Hi, my name is Kadir. I really like to bring good-looking and interesting websites and web apps to life. I see myself as someone who is open to improvement, strong in communication and willing to solve problems. I have a very curious nature and this is a strong factor that fuels my enthusiasm for research. I am a person who does not get tired of dealing with the problems I encounter and I never delegate my responsibilities to others. I really like software development. I think I understand the importance of not rushing to write code, maintaining it, being clean and of good quality."
+        />
       </div>
 
       <motion.div
