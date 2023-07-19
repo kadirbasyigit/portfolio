@@ -76,9 +76,26 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url('https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=407&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    background: #f5f5f5;
+
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 30px,
+        rgba(255, 0, 204, 0.02) 30px,
+        rgba(255, 0, 204, 0.02) 32px
+      ),
+      repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 30px,
+        rgba(255, 0, 204, 0.02) 30px,
+        rgba(255, 0, 204, 0.02) 32px
+      );
+    background-size: 100% 32px, 32px 100%;
+    background-position: 0 0, 0 0;
+    background-repeat: repeat-y, repeat-x;
   }
 }
 
