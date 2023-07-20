@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import developerImg from '../public/developer.webp';
-import { motion, AnimatePresence } from 'framer-motion';
+import developerImg from '../public/assets/developer.webp';
+import { motion } from 'framer-motion';
 import Highlighter from 'react-highlight-words';
 
 const Hero = () => {

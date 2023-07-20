@@ -116,6 +116,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bg-gradient {
+  background: #5f2c82;
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+}
+
 .animated-gradient-text {
   background: linear-gradient(to right, #ff00cc, #3333ff);
   background-clip: text;

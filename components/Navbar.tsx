@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import myLogo from '../public/myLogo.svg';
+import myLogo from '../public/assets/myLogo.svg';
 import { Button } from './ui/button';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { RiMenu5Fill, RiCloseFill } from 'react-icons/ri';
 import { AnimatePresence, motion } from 'framer-motion';
 import { animateScroll as scroll, scroller, Events } from 'react-scroll';
