@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from './ui/button';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const ProjectItem = ({
   image,
@@ -8,6 +9,8 @@ const ProjectItem = ({
   title,
   techStack,
   id,
+  link,
+  github,
 }: any) => {
   return (
     <div className="mb-20">
@@ -28,7 +31,7 @@ const ProjectItem = ({
           {techStack.map((tech: any) => (
             <span
               key={id}
-              className="inline-block bg-gradient text-white px-4 py-2 text-[12px] font-bold rounded-full shadow-md"
+              className="inline-block bg-gradient-badge text-white px-4 py-2 text-[12px] font-bold rounded-full shadow-md"
             >
               {tech}
             </span>
@@ -36,8 +39,34 @@ const ProjectItem = ({
         </div>
 
         <div className="flex gap-4 justify-center">
-          <Button className="rounded-lg">View Live</Button>
-          <Button className="rounded-lg">Github</Button>
+          <Button
+            asChild
+            variant="link"
+            className="rounded-lg flex justify-between gap-2 items-center group shadow-button transition duration-300 ease-in-out"
+          >
+            <a
+              className="bg-gradient-button text-white "
+              href={link}
+              target="_blank"
+            >
+              View Live
+              <GoArrowUpRight className="group-hover:-mt-1 w-5 h-5 transition-all" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="link"
+            className="rounded-lg flex justify-between gap-2 items-center group shadow-button transition duration-300 ease-in-out"
+          >
+            <a
+              className="bg-gradient-button text-white"
+              href={github}
+              target="_blank"
+            >
+              Github
+              <GoArrowUpRight className="group-hover:-mt-1 w-5 h-5 transition-all" />
+            </a>
+          </Button>
         </div>
       </div>
     </div>

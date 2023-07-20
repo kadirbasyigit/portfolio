@@ -116,10 +116,20 @@
   -webkit-text-fill-color: transparent;
 }
 
-.bg-gradient {
+.bg-gradient-badge {
   background: #5f2c82;
   background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
   background: linear-gradient(to right, #49a09d, #5f2c82);
+}
+
+.bg-gradient-button {
+  background: #ff00cc;
+  background: -webkit-linear-gradient(to right, #ff00cc, #3333ff);
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+.shadow-button:hover {
+  box-shadow: 0px 8px 15px -5px rgba(51, 51, 255, 0.7);
 }
 
 .animated-gradient-text {
