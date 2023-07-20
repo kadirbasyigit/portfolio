@@ -62,7 +62,13 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white`}
           variant="link"
         >
-          <a href="#about" onClick={() => scrollToSection('about')}>
+          <a
+            className={`border-blue-600 ${
+              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
+            } `}
+            href="#about"
+            onClick={() => scrollToSection('about')}
+          >
             About me
           </a>
         </Button>
@@ -72,7 +78,13 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
-          <a href="#projects" onClick={() => scrollToSection('projects')}>
+          <a
+            className={`border-blue-600 ${
+              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
+            } `}
+            href="#projects"
+            onClick={() => scrollToSection('projects')}
+          >
             Projects
           </a>
         </Button>
@@ -81,7 +93,13 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
-          <a href="#skills" onClick={() => scrollToSection('skills')}>
+          <a
+            className={`border-blue-600 ${
+              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
+            } `}
+            href="#skills"
+            onClick={() => scrollToSection('skills')}
+          >
             Skills
           </a>
         </Button>
