@@ -40,8 +40,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] z-50 ${
-        scrolled ? 'bg-transparent' : 'bg-[#09090B]'
+      className={`max-w-11/12 mx-auto md:max-w-[1100px] bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] z-50 ${
+        scrolled ? 'bg-transparent md:max-w-full' : 'bg-[#09090B]'
       } `}
     >
       <Image
@@ -52,14 +52,14 @@ const Navbar = () => {
         className="bg-[#09090B] rounded-lg"
       />
 
-      <div className="hidden md:flex gap-6">
+      <div
+        className={`hidden md:flex gap-6 ${
+          scrolled && 'bg-black px-6 py-2 rounded-md'
+        } `}
+      >
         <Button
           asChild
-          className={` transition duration-200 ease-in-out p-0 ${
-            scrolled
-              ? 'text-black hover:text-[#005DA3] '
-              : 'text-[#D1D1D1] hover:text-white'
-          }`}
+          className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white`}
           variant="link"
         >
           <a href="#about" onClick={() => scrollToSection('about')}>
@@ -69,11 +69,7 @@ const Navbar = () => {
 
         <Button
           asChild
-          className={` transition duration-200 ease-in-out p-0 ${
-            scrolled
-              ? 'text-black hover:text-[#005DA3] '
-              : 'text-[#D1D1D1] hover:text-white'
-          }`}
+          className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
           <a href="#projects" onClick={() => scrollToSection('projects')}>
@@ -82,11 +78,7 @@ const Navbar = () => {
         </Button>
         <Button
           asChild
-          className={` transition duration-200 ease-in-out p-0 ${
-            scrolled
-              ? 'text-black hover:text-[#005DA3] '
-              : 'text-[#D1D1D1] hover:text-white'
-          }`}
+          className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
           <a href="#skills" onClick={() => scrollToSection('skills')}>
