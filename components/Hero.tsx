@@ -13,13 +13,13 @@ const Hero = () => {
     >
       <div className="overflow-hidden">
         <motion.h2
-          initial={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{
             opacity: 1,
-            scale: 1,
-            rotateZ: 0,
+            x: 0,
           }}
-          exit={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
           className="relative gradient-text | text-3xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
         >
           I&apos;m a front end react developer from Türkiye
@@ -40,13 +40,13 @@ const Hero = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
+        initial={{ opacity: 0, x: 100 }}
         animate={{
           opacity: 1,
-          scale: 1,
-          rotateZ: 0,
+          x: 0,
         }}
-        exit={{ opacity: 0, scale: 0.5, rotateZ: 180 }}
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ duration: 0.5 }}
         className="justify-self-end"
       >
         <Image src={developerImg} alt="developer image" />
