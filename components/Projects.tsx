@@ -19,6 +19,7 @@ const Projects = () => {
       alt: 'netflix clone image',
       imageMobile: netflixMobile,
       title: 'NETFLIX CLONE',
+      techStack: ['Nextjs', 'Tailwind', 'TMDB API', 'MUI'],
     },
     {
       id: 'youtube',
@@ -26,6 +27,7 @@ const Projects = () => {
       alt: 'youtube clone image',
       imageMobile: youtubeMobile,
       title: 'YOUTUBE CLONE',
+      techStack: ['Vitejs', 'React Router', 'RAPID API', 'MUI'],
     },
     {
       id: 'chatGPT',
@@ -33,6 +35,7 @@ const Projects = () => {
       alt: 'chatGPT landing page image',
       imageMobile: chatGPTMobile,
       title: 'CHATGPT LANDING PAGE',
+      techStack: ['Vitejs', 'Scss', 'Animated with Aos'],
     },
     {
       id: 'weather',
@@ -40,6 +43,14 @@ const Projects = () => {
       alt: 'weather image',
       imageMobile: weatherMobile,
       title: 'DYNAMIC BACKGROUND WEATHER APP',
+      techStack: [
+        'Nextjs',
+        'Tailwind',
+        'Shadcn UI',
+        'Open Weather Map API',
+        'Framer Motion',
+        'Unsplash Image API',
+      ],
     },
     {
       id: 'bank',
@@ -47,6 +58,7 @@ const Projects = () => {
       alt: 'bank image',
       imageMobile: bankMobile,
       title: 'BANK LANDING PAGE',
+      techStack: ['Vitejs', 'Tailwind'],
     },
   ];
 
@@ -58,10 +70,12 @@ const Projects = () => {
       {projects.map(project => (
         <ProjectItem
           key={project.id}
+          id={project.id}
           image={project.image}
           alt={project.alt}
           imageMobile={project.imageMobile}
           title={project.title}
+          techStack={project.techStack}
         />
       ))}
     </section>
