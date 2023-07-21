@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import myLogo from '../public/assets/myLogo.svg';
+import myLogo from '../public/myLogo.svg';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 import { RiMenu5Fill, RiCloseFill } from 'react-icons/ri';

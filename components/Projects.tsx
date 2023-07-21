@@ -1,13 +1,13 @@
-import netflix from '../public/assets/netflix.webp';
-import netflixMobile from '../public/assets/netflix-mobile.webp';
-import youtube from '../public/assets/youtube.webp';
-import youtubeMobile from '../public/assets/youtube-mobile.webp';
-import chatGPT from '../public/assets/chatGPT.webp';
-import chatGPTMobile from '../public/assets/chatGPT-mobile.webp';
-import weather from '../public/assets/weather.webp';
-import weatherMobile from '../public/assets/weather-mobile.webp';
-import bank from '../public/assets/bank.webp';
-import bankMobile from '../public/assets/bank-mobile.webp';
+import netflix from '../public/netflix.webp';
+import netflixMobile from '../public/netflix-mobile.webp';
+import youtube from '../public/youtube.webp';
+import youtubeMobile from '../public/youtube-mobile.webp';
+import chatGPT from '../public/chatGPT.webp';
+import chatGPTMobile from '../public/chatGPT-mobile.webp';
+import weather from '../public/weather.webp';
+import weatherMobile from '../public/weather-mobile.webp';
+import bank from '../public/bank.webp';
+import bankMobile from '../public/bank-mobile.webp';
 
 import ProjectItem from './ProjectItem';
 
