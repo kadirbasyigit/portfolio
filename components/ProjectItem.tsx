@@ -6,6 +6,17 @@ import { GoArrowUpRight } from 'react-icons/go';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
+type ProjectItemProps = {
+  image: string;
+  alt: string;
+  imageMobile: string;
+  title: string;
+  techStack: string[];
+  id: string;
+  link: string;
+  github: string;
+};
+
 const ProjectItem = ({
   image,
   alt,
@@ -15,7 +26,7 @@ const ProjectItem = ({
   id,
   link,
   github,
-}: any) => {
+}: ProjectItemProps) => {
   const [isImageVisible, setIsImageVisible] = useState(false);
 
   const handleMouseEnter = () => {
