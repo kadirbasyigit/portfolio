@@ -78,7 +78,7 @@ const Projects = () => {
       id="projects"
       className="py-4 md:px-24 md:py-10 rounded-lg bg-white mb-20 font-sora shadow-xl"
     >
-      <h3 className="text-4xl text-center mb-10 font-sora border-b-2 border-teal-300">
+      <h3 className="text-3xl text-center mb-10 font-sora border-b-2 border-teal-300">
         PROJECTS
       </h3>
 

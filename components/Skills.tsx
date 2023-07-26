@@ -101,7 +101,7 @@ const Skills = () => {
       id="skills"
       className="skills-bg p-6 shadow-2xl rounded-lg mb-20 bg-white"
     >
-      <h3 className="text-4xl text-center mb-10 font-sora border-b-2 border-teal-300">
+      <h3 className="text-3xl text-center mb-10 font-sora border-b-2 border-teal-300">
         SKILLS
       </h3>
 
