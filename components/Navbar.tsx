@@ -34,7 +34,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     scroller.scrollTo(sectionId, {
       smooth: true,
-      offset: -100,
+      offset: -120,
     });
   };
 
