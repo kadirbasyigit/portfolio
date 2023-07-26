@@ -1,6 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { GoArrowUpRight } from 'react-icons/go';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 const ProjectItem = ({
   image,
@@ -12,17 +16,45 @@ const ProjectItem = ({
   link,
   github,
 }: any) => {
+  const [isImageVisible, setIsImageVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsImageVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsImageVisible(false);
+  };
+
   return (
     <div className="mb-20">
-      <div className="relative group">
+      <div
+        className="relative group"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="mb-10 cursor-pointer hover:blur-md ">
           <Image className="rounded-lg" src={image} alt={alt} />
         </div>
-        <Image
-          className="pointer-events-none hidden group-hover:block absolute left-1/2 top-0 -translate-x-1/2 w-60 h-auto object-cover rounded-lg"
-          src={imageMobile}
-          alt="netflix clone mobile"
-        />
+
+        <AnimatePresence>
+          {isImageVisible && (
+            <motion.div
+              key="visible"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: -100 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5 }}
+              className="pointer-events-none absolute left-1/2 top-0 w-60 h-auto object-cover rounded-lg"
+            >
+              <Image
+                className="rounded-lg"
+                src={imageMobile}
+                alt="netflix clone mobile"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="grid text-center gap-y-6">
