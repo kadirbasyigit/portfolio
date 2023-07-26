@@ -40,11 +40,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-11/12 mx-auto bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-2 mb-20 h-[89px] z-50 ${
-        scrolled
-          ? 'bg-transparent w-full md:max-w-full'
-          : 'bg-[#09090B] md:max-w-[1100px]'
-      } `}
+      className={`bg-blur px-10 lg:px-14 py-4 mt-5 rounded-lg flex justify-between items-center sticky top-5 mb-20 h-[89px] z-50  ${
+        scrolled ? 'bg-transparent' : 'bg-[#09090B]'
+      } transition-all ease-in-out duration-500 `}
     >
       <Image
         src={myLogo}
@@ -55,8 +53,8 @@ const Navbar = () => {
       />
 
       <div
-        className={`hidden md:flex gap-6 ${
-          scrolled && 'bg-black px-6 py-2 rounded-md'
+        className={`hidden md:flex gap-6 px-4 py-2 transition-all ease-in-out duration-500 ${
+          scrolled && 'bg-[#09090B] rounded-md'
         } `}
       >
         <Button
@@ -64,13 +62,7 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white`}
           variant="link"
         >
-          <a
-            className={`border-blue-600 ${
-              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
-            } `}
-            href="#about"
-            onClick={() => scrollToSection('about')}
-          >
+          <a href="#about" onClick={() => scrollToSection('about')}>
             About me
           </a>
         </Button>
@@ -80,13 +72,7 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
-          <a
-            className={`border-blue-600 ${
-              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
-            } `}
-            href="#projects"
-            onClick={() => scrollToSection('projects')}
-          >
+          <a href="#projects" onClick={() => scrollToSection('projects')}>
             Projects
           </a>
         </Button>
@@ -95,13 +81,7 @@ const Navbar = () => {
           className={` transition duration-200 ease-in-out p-0 text-[#D1D1D1] hover:text-white `}
           variant="link"
         >
-          <a
-            className={`border-blue-600 ${
-              scrolled && 'hover:border-b-2 hover:border-blue-600 rounded-none'
-            } `}
-            href="#skills"
-            onClick={() => scrollToSection('skills')}
-          >
+          <a href="#skills" onClick={() => scrollToSection('skills')}>
             Skills
           </a>
         </Button>
