@@ -1,15 +1,15 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Button } from './ui/button';
 import { GoArrowUpRight } from 'react-icons/go';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 type ProjectItemProps = {
-  image: string;
+  image: StaticImageData;
   alt: string;
-  imageMobile: string;
+  imageMobile: StaticImageData;
   title: string;
   techStack: string[];
   id: string;
