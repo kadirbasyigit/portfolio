@@ -134,7 +134,7 @@ const Navbar = () => {
               setTheme('dark');
               handleThemeChange();
             }}
-            className="w-5 h-5 cursor-pointer text-white/90 transition-all duration-500 ease-in-out"
+            className="w-5 h-5 cursor-pointer text-white/90"
           />
         ) : (
           <IoSunnyOutline
@@ -142,7 +142,7 @@ const Navbar = () => {
               setTheme('light');
               handleThemeChange();
             }}
-            className="w-5 h-5 cursor-pointer text-white/90 transition-all duration-500 ease-in-out"
+            className="w-5 h-5 cursor-pointer text-white/90"
           />
         )}
       </div>
@@ -152,12 +152,16 @@ const Navbar = () => {
         {isMenuOpen ? (
           <RiCloseFill
             onClick={() => setIsMenuOpen(prevState => !prevState)}
-            className={`  ${scrolled ? 'text-black' : 'text-white'} w-7 h-7`}
+            className={`  ${
+              scrolled ? 'text-black dark:text-white' : 'text-white'
+            } w-7 h-7`}
           />
         ) : (
           <RiMenu5Fill
             onClick={() => setIsMenuOpen(prevState => !prevState)}
-            className={`  ${scrolled ? 'text-black' : 'text-white'} w-7 h-7`}
+            className={`  ${
+              scrolled ? 'text-black dark:text-white' : 'text-white'
+            } w-7 h-7`}
           />
         )}
 
@@ -172,7 +176,7 @@ const Navbar = () => {
               exit={{ opacity: 0, y: 100 }}
               className={`${
                 isMenuOpen ? 'flex' : 'hidden'
-              } bg-blur absolute flex-col top-16 -right-10 w-36 py-4 rounded-lg bg-[#09090B]`}
+              } bg-blur absolute flex-col items-center top-16 -right-10 w-36 py-4 rounded-lg bg-[#09090B]`}
             >
               <Button
                 asChild
@@ -244,6 +248,25 @@ const Navbar = () => {
                   Skills
                 </motion.a>
               </Button>
+              {theme === 'light' ? (
+                <BsFillMoonStarsFill
+                  onClick={() => {
+                    setTheme('dark');
+                    handleThemeChange();
+                    setIsMenuOpen(prevState => !prevState);
+                  }}
+                  className="w-5 h-5 cursor-pointer text-white/90"
+                />
+              ) : (
+                <IoSunnyOutline
+                  onClick={() => {
+                    setTheme('light');
+                    handleThemeChange();
+                    setIsMenuOpen(prevState => !prevState);
+                  }}
+                  className="w-5 h-5 cursor-pointer text-white/90"
+                />
+              )}
             </motion.div>
           )}
         </AnimatePresence>

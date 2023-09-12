@@ -61,7 +61,7 @@ const Skills = () => {
       animateNumber(cssRef, 85);
       animateNumber(jsRef, 75);
       animateNumber(tailwindRef, 80);
-      animateNumber(reactRef, 70);
+      animateNumber(reactRef, 80);
       animateNumber(githubRef, 70);
       animateNumber(materialUiRef, 65);
       animateNumber(sassRef, 70);
@@ -87,7 +87,7 @@ const Skills = () => {
       setCssProgress(85);
       setJsProgress(75);
       setTailwindProgress(80);
-      setReactProgress(70);
+      setReactProgress(80);
       setGithubProgress(70);
       setMaterialUiProgress(65);
       setSassProgress(70);
