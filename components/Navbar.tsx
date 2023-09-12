@@ -9,51 +9,17 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { animateScroll as scroll, scroller, Events } from 'react-scroll';
 import { IoSunnyOutline } from 'react-icons/io5';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { useTheme } from 'next-themes';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check if the user's color scheme is set to 'dark'
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-    // Initialize the theme based on the user's preference
-    setTheme(darkModeQuery.matches ? 'dark' : 'light');
-    if (darkModeQuery.matches) {
-      document.documentElement.classList.remove('light');
-      document.documentElement.classList.add('dark');
-    }
-
-    // Listen for changes in the user's color scheme
-    const handleColorSchemeChange = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? 'dark' : 'light');
-      if (e.matches) {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-      }
-    };
-
-    darkModeQuery.addEventListener('change', handleColorSchemeChange);
-
-    return () => {
-      darkModeQuery.removeEventListener('change', handleColorSchemeChange);
-    };
+    setMounted(true);
   }, []);
-
-  function handleThemeChange() {
-    if (theme === 'light') {
-      document.documentElement.classList.remove('light');
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    }
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,20 +94,14 @@ const Navbar = () => {
             Skills
           </a>
         </Button>
-        {theme === 'light' ? (
+        {mounted && theme === 'light' ? (
           <BsFillMoonStarsFill
-            onClick={() => {
-              setTheme('dark');
-              handleThemeChange();
-            }}
+            onClick={() => setTheme('dark')}
             className="w-5 h-5 cursor-pointer text-white/90"
           />
         ) : (
           <IoSunnyOutline
-            onClick={() => {
-              setTheme('light');
-              handleThemeChange();
-            }}
+            onClick={() => setTheme('light')}
             className="w-5 h-5 cursor-pointer text-white/90"
           />
         )}
@@ -251,8 +211,6 @@ const Navbar = () => {
               {theme === 'light' ? (
                 <BsFillMoonStarsFill
                   onClick={() => {
-                    setTheme('dark');
-                    handleThemeChange();
                     setIsMenuOpen(prevState => !prevState);
                   }}
                   className="w-5 h-5 cursor-pointer text-white/90"
@@ -260,8 +218,6 @@ const Navbar = () => {
               ) : (
                 <IoSunnyOutline
                   onClick={() => {
-                    setTheme('light');
-                    handleThemeChange();
                     setIsMenuOpen(prevState => !prevState);
                   }}
                   className="w-5 h-5 cursor-pointer text-white/90"
