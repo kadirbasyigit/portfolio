@@ -99,7 +99,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="skills-bg p-6 shadow-2xl rounded-lg mb-20 bg-white"
+      className="skills-bg p-6 shadow-2xl rounded-lg mb-20 bg-white dark:bg-black border-8 border-teal-100 dark:border-teal-700 dark:text-white/90"
     >
       <h3 className="text-3xl text-center mb-10 font-sora border-b-2 border-teal-300">
         SKILLS

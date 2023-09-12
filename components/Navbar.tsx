@@ -7,10 +7,53 @@ import { useEffect, useState } from 'react';
 import { RiMenu5Fill, RiCloseFill } from 'react-icons/ri';
 import { AnimatePresence, motion } from 'framer-motion';
 import { animateScroll as scroll, scroller, Events } from 'react-scroll';
+import { IoSunnyOutline } from 'react-icons/io5';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    // Check if the user's color scheme is set to 'dark'
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Initialize the theme based on the user's preference
+    setTheme(darkModeQuery.matches ? 'dark' : 'light');
+    if (darkModeQuery.matches) {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+
+    // Listen for changes in the user's color scheme
+    const handleColorSchemeChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? 'dark' : 'light');
+      if (e.matches) {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    };
+
+    darkModeQuery.addEventListener('change', handleColorSchemeChange);
+
+    return () => {
+      darkModeQuery.removeEventListener('change', handleColorSchemeChange);
+    };
+  }, []);
+
+  function handleThemeChange() {
+    if (theme === 'light') {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +96,7 @@ const Navbar = () => {
       />
 
       <div
-        className={`hidden md:flex gap-6 px-4 py-2 transition-all ease-in-out duration-500 ${
+        className={`hidden md:flex items-center gap-6 px-4 py-2 transition-all ease-in-out duration-500 ${
           scrolled && 'bg-[#09090B] rounded-md'
         } `}
       >
@@ -85,6 +128,23 @@ const Navbar = () => {
             Skills
           </a>
         </Button>
+        {theme === 'light' ? (
+          <BsFillMoonStarsFill
+            onClick={() => {
+              setTheme('dark');
+              handleThemeChange();
+            }}
+            className="w-5 h-5 cursor-pointer text-white/90 transition-all duration-500 ease-in-out"
+          />
+        ) : (
+          <IoSunnyOutline
+            onClick={() => {
+              setTheme('light');
+              handleThemeChange();
+            }}
+            className="w-5 h-5 cursor-pointer text-white/90 transition-all duration-500 ease-in-out"
+          />
+        )}
       </div>
 
       {/* MENU STARTS */}

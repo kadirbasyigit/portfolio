@@ -27,7 +27,7 @@ const Hero = () => {
 
         <Highlighter
           highlightClassName="animated-gradient-text"
-          className="leading-6 text-sm md:text-base text-black/80"
+          className="leading-6 text-sm md:text-base text-black/80 dark:text-white/90"
           searchWords={[
             'improvement',
             'communication ',

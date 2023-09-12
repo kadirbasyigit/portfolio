@@ -4,7 +4,7 @@ import { FaGithub, FaTwitter, FaLinkedinIn, FaTelegram } from 'react-icons/fa6';
 const Footer = () => {
   return (
     <div className="relative overflow-hidden">
-      <section className="bg-white shadow-2xl py-6 rounded-md font-sora text-sm my-16 space-y-6 w-11/12 lg:max-w-[1000px] mx-auto">
+      <section className="bg-white dark:bg-black dark:text-white/90 shadow-2xl py-6 rounded-md font-sora text-sm my-16 space-y-6 w-11/12 lg:max-w-[1000px] mx-auto">
         <p className="text-center">
           You can find the source code for this site at &nbsp;
           <Button
@@ -13,7 +13,7 @@ const Footer = () => {
             asChild
           >
             <a
-              className="relative p-0 m-0 footer-link"
+              className="relative p-0 m-0 footer-link dark:text-white/90"
               href="https://github.com/k1d12r04/portfolio"
               target="_blank"
             >
@@ -34,7 +34,7 @@ const Footer = () => {
               href="https://github.com/k1d12r04"
               target="_blank"
             >
-              <FaGithub className="w-7 h-7 hover:text-[#3333ff] transition  hover:border-blue-600 " />
+              <FaGithub className="w-7 h-7  hover:text-[#3333ff] dark:text-white/90 dark:hover:text-[#3333ff] transition  hover:border-blue-600 " />
             </a>
           </Button>
           <Button
@@ -47,7 +47,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/k1d12r"
               target="_blank"
             >
-              <FaLinkedinIn className="w-7 h-7 hover:text-[#3333ff] transition  hover:border-blue-600 " />
+              <FaLinkedinIn className="w-7 h-7  hover:text-[#3333ff] dark:text-white/90 dark:hover:text-[#3333ff] transition  hover:border-blue-600 " />
             </a>
           </Button>
           <Button
@@ -60,7 +60,7 @@ const Footer = () => {
               href="https://twitter.com/k1d12r"
               target="_blank"
             >
-              <FaTwitter className="w-7 h-7 hover:text-[#3333ff] transition  hover:border-blue-600 " />
+              <FaTwitter className="w-7 h-7  hover:text-[#3333ff] dark:text-white/90 dark:hover:text-[#3333ff] transition  hover:border-blue-600 " />
             </a>
           </Button>
           <Button
@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://t.me/k1d12r"
               target="_blank"
             >
-              <FaTelegram className="w-7 h-7 hover:text-[#3333ff]  transition  hover:border-blue-600 " />
+              <FaTelegram className="w-7 h-7  hover:text-[#3333ff] dark:text-white/90 dark:hover:text-[#3333ff] transition  hover:border-blue-600 " />
             </a>
           </Button>
         </p>
