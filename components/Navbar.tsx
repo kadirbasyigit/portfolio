@@ -212,6 +212,7 @@ const Navbar = () => {
                 <BsFillMoonStarsFill
                   onClick={() => {
                     setIsMenuOpen(prevState => !prevState);
+                    setTheme('dark');
                   }}
                   className="w-5 h-5 cursor-pointer text-white/90"
                 />
@@ -219,6 +220,7 @@ const Navbar = () => {
                 <IoSunnyOutline
                   onClick={() => {
                     setIsMenuOpen(prevState => !prevState);
+                    setTheme('light');
                   }}
                   className="w-5 h-5 cursor-pointer text-white/90"
                 />
