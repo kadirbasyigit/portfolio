@@ -38,14 +38,14 @@ const ProjectItem = ({
   };
 
   return (
-    <div className="mb-20">
+    <div>
       <div
         className="relative group"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="mb-10 cursor-pointer hover:blur-md ">
-          <Image className="rounded-lg" src={image} alt={alt} />
+        <div className="mb-2 sm:mb-5 cursor-pointer hover:blur-md ">
+          <Image className="rounded-lg h-auto" src={image} alt={alt} />
         </div>
 
         <AnimatePresence>
@@ -81,11 +81,11 @@ const ProjectItem = ({
           ))}
         </div>
 
-        <div className="flex gap-4 justify-center">
+        <div className={`flex gap-4 mb-6 justify-center`}>
           <Button
             asChild
             variant="link"
-            className="rounded-lg flex justify-between gap-2 items-center group shadow-button transition duration-300 ease-in-out"
+            className="shadow-button | rounded-lg flex justify-between gap-2 items-center group transition duration-300 ease-in-out"
           >
             <a
               className="bg-gradient-button text-white "
@@ -99,7 +99,7 @@ const ProjectItem = ({
           <Button
             asChild
             variant="link"
-            className="rounded-lg flex justify-between gap-2 items-center group shadow-button transition duration-300 ease-in-out"
+            className="shadow-button | rounded-lg flex justify-between gap-2 items-center group transition duration-300 ease-in-out"
           >
             <a
               className="bg-gradient-button text-white"
