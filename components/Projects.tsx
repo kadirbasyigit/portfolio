@@ -125,7 +125,7 @@ const Projects = () => {
       <Button className="arrow-right | hidden lg:block absolute top-1/2 right-1 bg-transparent hover:bg-transparent hover:-right-1 transition-all duration-200">
         <Image src={nextButton} alt="next button" />
       </Button>
-      <div className="swiper-pagination | absolute bottom-0 space-x-2"></div>
+      <div className="swiper-pagination | absolute bottom-0 space-x-2 dark:bg-white/60 py-2 rounded-md"></div>
     </section>
   );
 };
