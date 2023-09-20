@@ -99,7 +99,8 @@ const Projects = () => {
           el: '.swiper-pagination',
           dynamicBullets: true,
         }}
-        grabCursor={true}
+        cssMode
+        spaceBetween={20}
         navigation={{ nextEl: '.arrow-right', prevEl: '.arrow-left' }}
         modules={[Pagination, Navigation]}
         className="mySwiper"
@@ -119,10 +120,10 @@ const Projects = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Button className="arrow-left | hidden lg:block absolute top-1/2 left-1 bg-transparent hover:bg-transparent hover:-left-1 transition-all duration-200">
+      <Button className="arrow-left | left-0 top-8 w-20 h-20 lg:block absolute lg:top-1/2 lg:left-1 bg-transparent hover:bg-transparent lg:hover:-left-1 transition-all duration-200">
         <Image src={prevButton} alt="prev button" />
       </Button>
-      <Button className="arrow-right | hidden lg:block absolute top-1/2 right-1 bg-transparent hover:bg-transparent hover:-right-1 transition-all duration-200">
+      <Button className="arrow-right | right-0 top-8 w-20 h-20 lg:block absolute lg:top-1/2 lg:right-1 bg-transparent hover:bg-transparent lg:hover:-right-1 transition-all duration-200">
         <Image src={nextButton} alt="next button" />
       </Button>
       <div className="swiper-pagination | absolute bottom-0 space-x-2 dark:bg-white/60 py-2 rounded-md"></div>
