@@ -65,8 +65,8 @@ const Skills = () => {
       animateNumber(githubRef, 70);
       animateNumber(materialUiRef, 65);
       animateNumber(sassRef, 70);
-      animateNumber(nextjsRef, 60);
-      animateNumber(typescriptRef, 70);
+      animateNumber(nextjsRef, 70);
+      animateNumber(typescriptRef, 75);
     }
   }, [inView]);
 
@@ -91,8 +91,8 @@ const Skills = () => {
       setGithubProgress(70);
       setMaterialUiProgress(65);
       setSassProgress(70);
-      setNextjsProgress(60);
-      setTypescriptProgress(70);
+      setNextjsProgress(70);
+      setTypescriptProgress(75);
     }
   }, [inView]);
 
@@ -171,7 +171,7 @@ const Skills = () => {
 
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
-            <RiGithubFill className="w-10 h-10 text-black" />
+            <RiGithubFill className="w-10 h-10 text-black dark:text-white" />
             <Progress value={githubProgress} />
             <span
               className={`font-medium font-sora count-up ${
@@ -207,7 +207,7 @@ const Skills = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <TbBrandNextjs className="w-10 h-10 text-black" />
+            <TbBrandNextjs className="w-10 h-10 text-black dark:text-white" />
             <Progress value={nextjsProgress} />
             <span
               className={`font-medium font-sora count-up ${
