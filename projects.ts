@@ -8,8 +8,55 @@ import weather from './public/weather.webp';
 import weatherMobile from './public/weather-mobile.webp';
 import bank from './public/bank.webp';
 import bankMobile from './public/bank-mobile.webp';
+import quiz from './public/quiz.webp';
+import quizMobile from './public/quiz-mobile.webp';
 
 export const projects = [
+  {
+    id: 'quiz',
+    image: quiz,
+    alt: 'quiz app',
+    imageMobile: quizMobile,
+    title: 'QUIZ APP WITH CONTENTFUL',
+    techStack: [
+      'Nextjs',
+      'Tailwind',
+      'Next UI',
+      'Contenful API',
+      'Typescript',
+      'Framer Motion',
+    ],
+    link: 'https://quiz-app-with-next.vercel.app/',
+    github: 'https://github.com/k1d12r04/quiz-app-with-next',
+  },
+  {
+    id: 'weather',
+    image: weather,
+    alt: 'weather image',
+    imageMobile: weatherMobile,
+    title: 'DYNAMIC BACKGROUND WEATHER APP',
+    techStack: [
+      'Nextjs',
+      'Tailwind',
+      'Shadcn UI',
+      'Open Weather Map API',
+      'Framer Motion',
+      'Unsplash Image API',
+      'Typescript',
+    ],
+    link: 'https://nextjs-weather-app-k1d12r04.vercel.app/',
+    github: 'https://github.com/k1d12r04/nextjs-weather-app',
+  },
+  {
+    id: 'bank',
+    image: bank,
+    alt: 'bank image',
+    imageMobile: bankMobile,
+    title: 'BANK LANDING PAGE',
+    techStack: ['Vitejs', 'Tailwind'],
+    link: 'https://bank-landing-website.netlify.app/',
+    github: 'https://github.com/k1d12r04/bank-website',
+  },
   {
     id: 'netflix',
     image: netflix,
@@ -39,33 +86,5 @@ export const projects = [
     techStack: ['Vitejs', 'Scss', 'Animated with Aos'],
     link: 'https://gpt3ai-landing.netlify.app/',
     github: 'https://github.com/k1d12r04/chatgpt-website',
-  },
-  {
-    id: 'weather',
-    image: weather,
-    alt: 'weather image',
-    imageMobile: weatherMobile,
-    title: 'DYNAMIC BACKGROUND WEATHER APP',
-    techStack: [
-      'Nextjs',
-      'Tailwind',
-      'Shadcn UI',
-      'Open Weather Map API',
-      'Framer Motion',
-      'Unsplash Image API',
-      'Typescript',
-    ],
-    link: 'https://nextjs-weather-app-k1d12r04.vercel.app/',
-    github: 'https://github.com/k1d12r04/nextjs-weather-app',
-  },
-  {
-    id: 'bank',
-    image: bank,
-    alt: 'bank image',
-    imageMobile: bankMobile,
-    title: 'BANK LANDING PAGE',
-    techStack: ['Vitejs', 'Tailwind'],
-    link: 'https://bank-landing-website.netlify.app/',
-    github: 'https://github.com/k1d12r04/bank-website',
   },
 ];

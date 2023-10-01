@@ -57,19 +57,6 @@ const Footer = () => {
           >
             <a
               className="relative p-0 m-0"
-              href="https://twitter.com/k1d12r"
-              target="_blank"
-            >
-              <FaTwitter className="w-7 h-7  hover:text-[#3333ff] dark:text-white/90 dark:hover:text-[#3333ff] transition  hover:border-blue-600 " />
-            </a>
-          </Button>
-          <Button
-            className="p-0 m-0 rounded-none font-medium h-auto"
-            variant="link"
-            asChild
-          >
-            <a
-              className="relative p-0 m-0"
               href="https://t.me/k1d12r"
               target="_blank"
             >
