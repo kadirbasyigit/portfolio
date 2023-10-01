@@ -40,11 +40,11 @@ const ProjectItem = ({
   return (
     <div>
       <div
-        className="relative group"
+        className="relative"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="mb-2 sm:mb-5 cursor-pointer hover:blur-md ">
+        <div className="mb-2 sm:mb-5 cursor-pointer hover:blur-sm transition-all duration-500">
           <Image className="rounded-lg h-auto" src={image} alt={alt} />
         </div>
 
@@ -56,7 +56,7 @@ const ProjectItem = ({
               animate={{ opacity: 1, x: -100 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="pointer-events-none absolute left-1/2 top-0 w-60 h-auto object-cover rounded-lg"
+              className="pointer-events-none absolute left-1/2 transform -translate-x-1/2 top-0 w-60 h-auto object-cover rounded-lg"
             >
               <Image
                 className="rounded-lg"
