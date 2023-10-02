@@ -58,7 +58,7 @@ const Navbar = () => {
         alt="logo"
         width={50}
         height={50}
-        className="bg-[#09090B] rounded-lg"
+        className="rounded-lg"
       />
 
       <div
