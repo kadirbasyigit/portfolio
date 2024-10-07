@@ -10,8 +10,27 @@ import bank from './public/bank.webp';
 import bankMobile from './public/bank-mobile.webp';
 import quiz from './public/quiz.webp';
 import quizMobile from './public/quiz-mobile.webp';
+import pharmacyOnDuty from './public/pharmacy-on-duty.webp';
+import pharmacyOnDutyMobile from './public/pharmacy-on-duty-mobile.webp';
 
 export const projects = [
+  {
+    id: 'pharmacy',
+    image: pharmacyOnDuty,
+    alt: 'pharmacy on duty app',
+    imageMobile: pharmacyOnDutyMobile,
+    title: 'PHARMACY ON DUTY APP',
+    techStack: [
+      'Vite',
+      'Tailwind',
+      'TanStack Query',
+      'TypeScript',
+      'Mantine',
+      'Nosy API',
+    ],
+    link: 'https://pharmacyonduty.netlify.app/',
+    github: 'https://github.com/k1d12r04/pharmacy-on-duty',
+  },
   {
     id: 'quiz',
     image: quiz,
