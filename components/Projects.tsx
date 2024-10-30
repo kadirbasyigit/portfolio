@@ -37,12 +37,11 @@ const Projects = () => {
         className="mySwiper"
       >
         {projects.map(project => (
-          <SwiperSlide>
+          <SwiperSlide key={project.id}>
             <ProjectItem
               id={project.id}
               image={project.image}
               alt={project.alt}
-              imageMobile={project.imageMobile}
               title={project.title}
               techStack={project.techStack}
               link={project.link}

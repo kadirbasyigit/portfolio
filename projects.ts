@@ -1,24 +1,16 @@
 import netflix from './public/netflix.webp';
-import netflixMobile from './public/netflix-mobile.webp';
 import youtube from './public/youtube.webp';
-import youtubeMobile from './public/youtube-mobile.webp';
 import chatGPT from './public/chatGPT.webp';
-import chatGPTMobile from './public/chatGPT-mobile.webp';
 import weather from './public/weather.webp';
-import weatherMobile from './public/weather-mobile.webp';
 import bank from './public/bank.webp';
-import bankMobile from './public/bank-mobile.webp';
 import quiz from './public/quiz.webp';
-import quizMobile from './public/quiz-mobile.webp';
 import pharmacyOnDuty from './public/pharmacy-on-duty.webp';
-import pharmacyOnDutyMobile from './public/pharmacy-on-duty-mobile.webp';
 
 export const projects = [
   {
     id: 'pharmacy',
     image: pharmacyOnDuty,
     alt: 'pharmacy on duty app',
-    imageMobile: pharmacyOnDutyMobile,
     title: 'PHARMACY ON DUTY APP',
     techStack: [
       'Vite',
@@ -35,7 +27,6 @@ export const projects = [
     id: 'quiz',
     image: quiz,
     alt: 'quiz app',
-    imageMobile: quizMobile,
     title: 'QUIZ APP WITH CONTENTFUL',
     techStack: [
       'Nextjs',
@@ -52,7 +43,6 @@ export const projects = [
     id: 'weather',
     image: weather,
     alt: 'weather image',
-    imageMobile: weatherMobile,
     title: 'DYNAMIC BACKGROUND WEATHER APP',
     techStack: [
       'Nextjs',
@@ -70,7 +60,6 @@ export const projects = [
     id: 'bank',
     image: bank,
     alt: 'bank image',
-    imageMobile: bankMobile,
     title: 'BANK LANDING PAGE',
     techStack: ['Vitejs', 'Tailwind'],
     link: 'https://bank-landing-website.netlify.app/',
@@ -80,7 +69,6 @@ export const projects = [
     id: 'netflix',
     image: netflix,
     alt: 'netflix clone image',
-    imageMobile: netflixMobile,
     title: 'NETFLIX CLONE',
     techStack: ['Nextjs', 'Tailwind', 'TMDB API', 'MUI', 'Typescript'],
     link: 'https://nextflix-j8qn-k1d12r04s-projects.vercel.app/',
@@ -90,7 +78,6 @@ export const projects = [
     id: 'youtube',
     image: youtube,
     alt: 'youtube clone image',
-    imageMobile: youtubeMobile,
     title: 'YOUTUBE CLONE',
     techStack: ['Vitejs', 'React Router', 'RAPID API', 'MUI', 'Typescript'],
     link: 'https://youtube-app-with-rapidapi.netlify.app/',
@@ -100,7 +87,6 @@ export const projects = [
     id: 'chatGPT',
     image: chatGPT,
     alt: 'chatGPT landing page image',
-    imageMobile: chatGPTMobile,
     title: 'CHATGPT LANDING PAGE',
     techStack: ['Vitejs', 'Scss', 'Animated with Aos'],
     link: 'https://gpt3ai-landing.netlify.app/',
