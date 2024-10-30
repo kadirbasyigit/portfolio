@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Disallow: /secret
+
+# Host
+Host: https://www.kadirbasyigit.com
+
+# Sitemaps
+Sitemap: https://www.kadirbasyigit.com/sitemap.xml
