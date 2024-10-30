@@ -37,7 +37,7 @@ const Projects = () => {
         className="mySwiper"
       >
         {projects.map(project => (
-          <SwiperSlide key={project.id}>
+          <SwiperSlide>
             <ProjectItem
               id={project.id}
               image={project.image}

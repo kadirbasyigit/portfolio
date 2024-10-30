@@ -12,7 +12,7 @@ const Hero = () => {
       className="grid md:grid-cols-2 items-center font-sora mx-2 mb-20 gap-10"
     >
       <div className="overflow-hidden">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, x: -100 }}
           animate={{
             opacity: 1,
@@ -20,10 +20,10 @@ const Hero = () => {
           }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="relative gradient-text text-4xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
+          className="relative gradient-text text-3xl md:text-5xl font-bold mb-2 md:mb-6 tracking-wide leading-tight"
         >
-          I&apos;m a front end react developer from Türkiye
-        </motion.h2>
+          My name is Kadir. I&apos;m a frontend developer from Türkiye.
+        </motion.h1>
 
         <Highlighter
           highlightClassName="animated-gradient-text"

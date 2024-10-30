@@ -29,7 +29,7 @@ export const projects = [
       'Nosy API',
     ],
     link: 'https://pharmacyonduty.netlify.app/',
-    github: 'https://github.com/k1d12r04/pharmacy-on-duty',
+    github: 'https://github.com/kadirbasyigit/pharmacy-on-duty',
   },
   {
     id: 'quiz',
@@ -46,7 +46,7 @@ export const projects = [
       'Framer Motion',
     ],
     link: 'https://quiz-app-with-next.vercel.app/',
-    github: 'https://github.com/k1d12r04/quiz-app-with-next',
+    github: 'https://github.com/kadirbasyigit/quiz-app-with-next',
   },
   {
     id: 'weather',
@@ -64,7 +64,7 @@ export const projects = [
       'Typescript',
     ],
     link: 'https://nextjs-weather-app-k1d12r04.vercel.app/',
-    github: 'https://github.com/k1d12r04/nextjs-weather-app',
+    github: 'https://github.com/kadirbasyigit/nextjs-weather-app',
   },
   {
     id: 'bank',
@@ -74,7 +74,7 @@ export const projects = [
     title: 'BANK LANDING PAGE',
     techStack: ['Vitejs', 'Tailwind'],
     link: 'https://bank-landing-website.netlify.app/',
-    github: 'https://github.com/k1d12r04/bank-website',
+    github: 'https://github.com/kadirbasyigit/bank-website',
   },
   {
     id: 'netflix',
@@ -83,8 +83,8 @@ export const projects = [
     imageMobile: netflixMobile,
     title: 'NETFLIX CLONE',
     techStack: ['Nextjs', 'Tailwind', 'TMDB API', 'MUI', 'Typescript'],
-    link: 'https://nextflix-k1d12r04.vercel.app/',
-    github: 'https://github.com/k1d12r04/nextflix-app',
+    link: 'https://nextflix-j8qn-k1d12r04s-projects.vercel.app/',
+    github: 'https://github.com/kadirbasyigit/nextflix-app',
   },
   {
     id: 'youtube',
@@ -94,7 +94,7 @@ export const projects = [
     title: 'YOUTUBE CLONE',
     techStack: ['Vitejs', 'React Router', 'RAPID API', 'MUI', 'Typescript'],
     link: 'https://youtube-app-with-rapidapi.netlify.app/',
-    github: 'https://github.com/k1d12r04/youtube-app',
+    github: 'https://github.com/kadirbasyigit/youtube-app',
   },
   {
     id: 'chatGPT',
@@ -104,6 +104,6 @@ export const projects = [
     title: 'CHATGPT LANDING PAGE',
     techStack: ['Vitejs', 'Scss', 'Animated with Aos'],
     link: 'https://gpt3ai-landing.netlify.app/',
-    github: 'https://github.com/k1d12r04/chatgpt-website',
+    github: 'https://github.com/kadirbasyigit/chatgpt-website',
   },
 ];
