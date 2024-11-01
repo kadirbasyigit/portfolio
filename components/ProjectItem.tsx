@@ -1,10 +1,8 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import { Button } from "./ui/button";
-import { GoArrowUpRight } from "react-icons/go";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import Image, { StaticImageData } from 'next/image';
+import { Button } from './ui/button';
+import { GoArrowUpRight } from 'react-icons/go';
 
 type ProjectItemProps = {
   image: StaticImageData;
