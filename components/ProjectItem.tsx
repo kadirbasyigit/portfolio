@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image, { StaticImageData } from 'next/image';
 import { Button } from './ui/button';
@@ -34,9 +34,9 @@ const ProjectItem = ({
       <div className="grid text-center gap-y-6">
         <h2 className="gradient-text text-xl">{title} </h2>
         <div className="flex gap-4 flex-wrap justify-center">
-          {techStack.map(tech => (
+          {techStack.map((tech, idx) => (
             <span
-              key={id}
+              key={id + idx}
               className="inline-block bg-gradient-badge text-white px-4 py-2 text-[12px] font-bold rounded-full shadow-md"
             >
               {tech}
